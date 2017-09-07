@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+	$("#nav li:has(ul)").click(function (event) {
+		if (this == event.target) {
+			$(this).toggleClass('clicked').children('ul').slideToggle();
+			$(this).find('li:has(ul)').removeClass('clicked').find("ul").slideUp();
+			$(this).siblings().removeClass('clicked').find("ul").slideUp();
+		}
+	}).addClass('has_ul');
+});
+</script>
+
+<style type="text/css">
+body {background-color: #FFF;}
+#content {margin-left:20px;}
+#nav {font: bold 12px/25px arial, sans-serif;}
+#nav ul {display:none;}
+#nav, #nav ul {padding:0; margin:0; list-style:none; width:150px;}
+#nav ul {padding-left:20px; background: #fff url(menutree/dots.png) repeat-y left top;}
+#nav li a {color:#000; text-indent:0; text-decoration:none; display:block; width:100%;}
+#nav li {line-height:25px; cursor:pointer; width:100%;}
+#nav li a:hover {color:#09c;}
+#nav li.has_ul {text-indent:20px; color:#000; background:url(menutree/folder2.png) no-repeat left 3px;}
+#nav li.has_ul:hover {color:#690;}
+#nav li.clicked {color:#690; background:url(menutree/folder2-open.png) no-repeat left 3px;}
+</style>
+
+
+</head>
+
+<body>
+<div id="wrapper">
+
+
+
+<div id="content">
+<h2>jQuery - Menu ad albero Espandibile</h2>
+
+<br /><br />
+<ul id="nav">
+	<li><a href='#'>Link_1</a></li>
+	<li>Espandibile_1
+		<ul>
+
+			<li><a href='#'>Link_2</a></li>
+			<li>Espandibile_2
+				<ul>
+					<li><a href='#'>Link_3</a></li>
+					<li>Espandibile_3
+						<ul>
+							<li><a href='#'>Link_4</a></li>
+							<li>Espandibile_4
+								<ul>
+
+									<li><a href='#'>Link_5</a></li>
+									<li><a href='#'>Link_6</a></li>
+									<li><a href='#'>Link_7</a></li>
+								</ul>
+							</li>
+							<li>Espandibile_5
+								<ul>
+									<li><a href='#'>Link_8</a></li>
+
+									<li><a href='#'>Link_9</a></li>
+									<li><a href='#'>Link_10</a></li>
+								</ul>
+							</li>
+							<li><a href='#'>Link_11</a></li>
+							<li>Espandibile_6
+								<ul>
+									<li><a href='#'>Link_12</a></li>
+
+									<li><a href='#'>Link_13</a></li>
+									<li><a href='#'>Link_14</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>Espandibile_7
+						<ul>
+
+							<li><a href='#'>Link_15</a></li>
+							<li>Espandibile_8
+								<ul>
+									<li><a href='#'>Link_16</a></li>
+									<li>Espandibile_9
+										<ul>
+											<li><a href='#'>Link_17</a></li>
+											<li><a href='#'>Link_18</a></li>
+
+											<li><a href='#'>Link_19</a></li>
+											<li><a href='#'>Link_20</a></li>
+											<li><a href='#'>Link_21</a></li>
+										</ul>
+									</li>
+									<li><a href='#'>Link_22</a></li>
+								</ul>
+
+							</li>
+							<li><a href='#'>Link_23</a></li>
+							<li><a href='#'>Link_24</a></li>
+							<li><a href='#'>Link_25</a></li>
+							<li><a href='#'>Link_26</a></li>
+						</ul>
+					</li>
+
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li><a href='#'>Link_27</a></li>
+	<li>Espandibile_10
+		<ul>
+			<li><a href='#'>Link_28</a></li>
+
+			<li>Espandibile_1
+				<ul>
+					<li><a href='#'>Link_29</a></li>
+					<li>Espandibile_12
+						<ul>
+							<li><a href='#'>Link_30</a></li>
+							<li>Espandibile_13
+								<ul>
+									<li><a href='#'>Link_31</a></li>
+
+									<li><a href='#'>Link_32</a></li>
+									<li><a href='#'>Link_33</a></li>
+								</ul>
+							</li>
+							<li><a href='#'>Link_34</a></li>
+						</ul>
+					</li>
+
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li><a href='#'>link_35</a></li>
+</ul>
+
+
+
+</div> <!-- end of content -->
+
+
+
+
+
+
+
+
+
+</div>
+</body>
+</html>
